@@ -60,7 +60,7 @@
     &-menu {
         @media screen and (max-width: 968px) {
             position: fixed;
-            left: 0;
+            left: -100%;
             top: var(--header-height);
             background-color: var(--white-color);
             width: 80%;
@@ -84,4 +84,8 @@
     &-toggle {
         cursor: pointer;
     }
+}
+
+.show {
+    left: 0;
 }
