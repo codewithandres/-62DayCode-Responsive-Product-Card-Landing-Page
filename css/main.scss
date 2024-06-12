@@ -35,3 +35,53 @@
     --z-fixed: 100;
     --z-modal: 1000;
 }
+
+.bg-grid {
+    max-width: 1200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--white-color);
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-menu {
+        @media screen and (max-width: 968px) {
+            position: fixed;
+            left: 0;
+            top: var(--header-height);
+            background-color: var(--white-color);
+            width: 80%;
+            height: 100%;
+            padding: 2rem;
+            z-index: var(--z-fixed);
+            transition: 200ms ease;
+
+        }
+    }
+
+    &-item {
+        margin-bottom: 2rem;
+        font-weight: var(--font-bold);
+    }
+
+    &-link {
+        color: var(--black-color);
+    }
+
+    &-toggle {
+        cursor: pointer;
+    }
+}
