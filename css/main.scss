@@ -12,7 +12,8 @@
     --white-color: #FFF;
 
     /*===== Font and typography =====*/
-    --body-font: 'Roboto', sans-serif;
+    --body-font: "Lato",
+        sans-serif;
 
     --biggest-font-size: 1.5rem;
     --big-font-size: 1.5rem;
@@ -36,6 +37,38 @@
     --z-modal: 1000;
 }
 
+/*===== BASE =====*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 .bg-grid {
     max-width: 1200px;
     margin-left: 1rem;
@@ -56,6 +89,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &-list {
+        list-style: none;
+    }
 
     &-menu {
         @media screen and (max-width: 968px) {
