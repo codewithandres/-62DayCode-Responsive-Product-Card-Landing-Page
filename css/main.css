@@ -188,4 +188,47 @@ a {
 }
 .data-description {
   font-size: var(--normal-font-size);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-title {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
+.size-content {
+  display: flex;
+}
+.size-tallas {
+  width: 40px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 0.5rem;
+  font-size: var(--normal-font-size);
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.size-tallas.active {
+  background-color: var(--primary);
+  color: var(--white-color);
+}
+
+.cant-title {
+  font-size: var(--normal-font-size);
+  margin-bottom: 1rem;
+}
+.cant-content {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white-color);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
 }/*# sourceMappingURL=main.css.map */

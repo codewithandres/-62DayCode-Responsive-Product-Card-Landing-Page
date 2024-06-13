@@ -212,3 +212,54 @@ a {
         font-size: var(--normal-font-size);
     }
 }
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.size {
+    &-title {
+        font-size: var(--normal-font-size);
+        margin-bottom: 1rem;
+    }
+
+    &-content {
+        display: flex;
+    }
+
+    &-tallas {
+        width: 40px;
+        height: 30px;
+        line-height: 30px;
+        margin-right: .5rem;
+        font-size: var(--normal-font-size);
+        text-align: center;
+        border-radius: .25rem;
+        cursor: pointer;
+    }
+
+    &-tallas.active {
+        background-color: var(--primary);
+        color: var(--white-color);
+    }
+}
+
+.cant {
+    &-title {
+        font-size: var(--normal-font-size);
+        margin-bottom: 1rem;
+    }
+
+    &-content {
+        width: 100px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary);
+        color: var(--white-color);
+        padding: .5rem;
+        border-radius: .25rem;
+    }
+}
