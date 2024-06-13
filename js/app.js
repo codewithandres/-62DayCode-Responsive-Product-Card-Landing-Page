@@ -1,15 +1,12 @@
 
 /*----- MENU -----*/
 const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId)
+    const toggle = document.getElementById(toggleId);
+    const nav = document.getElementById(navId);
 
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('show')
-        })
-    }
+    if (toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('show'))
 }
+
 showMenu('nav-toggle', 'nav-menu')
 
 /*----- CAMBIO COLORS -----*/
@@ -17,12 +14,12 @@ const sizes = document.querySelectorAll('.size__tallas');
 const colors = document.querySelectorAll('.sneaker__color');
 const sneaker = document.querySelectorAll('.sneaker__img');
 
-function changeSize() {
+const changeSize = () => {
     sizes.forEach(size => size.classList.remove('active'));
     this.classList.add('active');
 }
 
-function changeColor() {
+const changeColor = () => {
     let primary = this.getAttribute('primary');
     let color = this.getAttribute('color');
     let sneakerColor = document.querySelector(`.sneaker__img[color="${color}"]`);
