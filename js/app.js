@@ -14,18 +14,18 @@ const sizes = document.querySelectorAll('.size__tallas');
 const colors = document.querySelectorAll('.sneaker__color');
 const sneaker = document.querySelectorAll('.sneaker__img');
 
-const changeSize = () => {
+const changeSize = event => {
     sizes.forEach(size => size.classList.remove('active'));
-    this.classList.add('active');
+    event.target.classList.add('active');
 }
 
-const changeColor = () => {
-    let primary = this.getAttribute('primary');
-    let color = this.getAttribute('color');
+const changeColor = event => {
+    let primary = event.target.getAttribute('primary');
+    let color = event.target.getAttribute('color');
     let sneakerColor = document.querySelector(`.sneaker__img[color="${color}"]`);
 
     colors.forEach(c => c.classList.remove('active'));
-    this.classList.add('active');
+    event.target.classList.add('active');
 
     document.documentElement.style.setProperty('--primary', primary);
 
@@ -33,5 +33,5 @@ const changeColor = () => {
     sneakerColor.classList.add('shows')
 }
 
-sizes.forEach(size => size.addEventListener('click', changeSize));
-colors.forEach(c => c.addEventListener('click', changeColor));
+sizes.forEach(size => size.addEventListener('click', (event) => changeSize(event)));
+colors.forEach(c => c.addEventListener('click', (event) => changeColor(event)));
